@@ -1059,7 +1059,7 @@ dialog + .backdrop {
   overflow-y: hidden;
   text-overflow: ellipsis;
   width: 20%;
-  height: 15%;
+  height: 11%;
   background: #fff;
   display: inline-block;
   margin: 10px 10px;
