@@ -1,0 +1,141 @@
+<html lang="zh-CN">
+
+<head>
+  <title>Alan导航</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1,maximum-scale=1" name="viewport">
+  <meta content="jsthon" name="author">
+  <meta content="网站导航" name="description">
+  <meta content="导航,网址导航,导航网站,常用网站,常用网址" name="keywords">
+  <link href="assets/img/common/icon_64.png" rel="shortcut icon" type="image/png">
+  <link href="assets/img/common/icon_64.png" rel="apple-touch-icon">
+  <!-- 合并css -->
+  <link rel="stylesheet" href="assets/css/merge.min.css">
+  <!-- <link rel="stylesheet" href="assets/css/coffee.min.css"> -->
+</head>
+<!-- 修改modal的模板 -->
+<script type="text/template" id="modify_template">
+    标题<input type="text" id="modify_title" class="text-field" placeholder="标题" value="{title}">
+    描述<input type="text" id="modify_desc" class="text-field" placeholder="描述" value="{desc}">
+    url<input type="text" id="modify_url" class="text-field" placeholder="https://" value="{url}">
+    <select id="modify_tag" value={tag_value}>{tag_options}</select>
+</script>
+<!-- 在栏目名前加了个icon -->
+<style>
+  .info ul li img{
+    width: 12px;
+    height: 10px;
+    position: relative;
+    top: 11px;
+    margin-right: 3px;
+    opacity: 0.5;
+  }
+    .info ul li:first-child{
+    /*background-color: red;*/
+    overflow: hidden;
+    width: auto;
+  }
+</style>
+
+<body>
+  <div id="site-main">
+    <div id="jsi-flying-fish-container" class="container" style="width: 100%"></div>
+    <div id="main-overlay" class=""></div>
+    <!-- <header></header> -->
+    <div class="works">
+      <div class="work-link" style="opacity: 1;">
+        <div class="container">
+          <div class="tab">
+            <span class="common active">公共</span>
+            <span class="dev">开发</span>
+            <span class="test">测试</span>
+            <span class="sat">联调</span>
+            <span class="pre">预发</span>
+            <span class="prod">生产</span>
+            <i class="icon-cog" id="setting-icon"></i>
+          </div>
+          <div class="info" style=""></div>
+        </div>
+      </div>
+    </div>
+    <select id="tmp_tag" style="display: none"></select>
+    <div id="commonHtml" style="display: none">
+      <div class="card-list">
+        <div class="card-min cus-scroll">
+          <div class="thumbnail">
+            <div class="thumbnail"><img src="assets/img/common/baidu96.png" /></div>
+            <div class="thumbnail">
+              <a href="_" target="_blank">配置中心</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-min cus-scroll">
+          <div class="thumbnail">
+            <a href="_" target="_blank">debug</a>
+          </div>
+        </div>
+        <div class="card-min cus-scroll">
+          <div class="thumbnail">
+            <a href="_" target="_blank">debug</a>
+          </div>
+        </div>
+        <div class="card-min cus-scroll">
+          <div class="thumbnail">
+            <a href="_" target="_blank">debug</a>
+          </div>
+        </div>
+        <div class="card-min cus-scroll">
+          <div class="thumbnail">
+            <a href="_" target="_blank">debug</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="testHtml" style="display: none">
+      <ul>
+        <!-- <li><img src="assets/img/common/icon_64.png">测试环境</li> -->
+        <li>🌞测试环境</li>
+        <li data-toggle="tooltip" title="Eureka" desc="Eureka">
+          <a href="_" target="_blank">注册中心</a>
+        </li>
+        <li data-toggle="tooltip" title="xxl-Job" desc="xxl-Job">
+          <a href="_" target="_blank">定时任务</a>
+        </li>
+        <li data-toggle="tooltip" title="Apollo" desc="Apollo">
+          <a href="_" target="_blank">配置中心</a>
+        </li>
+      </ul>
+    </div>
+    <!-- <footer id=site-footer>
+      <div class=container>
+        <div class=copy>© <span id=current-year>
+            <script>
+            document.getElementById("current-year").innerHTML = (new Date).getFullYear()
+
+            </script>
+          </span>&nbsp;Alan导航<br><a href=http://beian.miit.gov.cn/ target=_blank>湘ICP备xxx号</a><br>
+        </div>
+        <div class=social>
+          <a href=https://github.com/uuorb target=_blank class=social-link><i class=icon-github-circled></i></a>
+        </div>
+      </div>
+    </footer> -->
+  </div>
+  <!-- 合并js -->
+  <script src="assets/scripts/merge.min.js"></script>  
+  <script src="assets/scripts/myIndex.js"></script>
+  <script src="assets/scripts/index.js"></script>
+  <script src="assets/scripts/main.js"></script>
+  <!--  业务    -->
+  <!-- <script src="assets/scripts/todo.js"></script> -->
+</body>
+<style>
+@media only screen and (max-width: 767px) {
+  #sidebar_search_box input[type=text] {
+    width: calc(100%)
+  }
+}
+
+</style>
+
+</html>
