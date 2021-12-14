@@ -57,13 +57,25 @@
     o(".work-link").find(".tab span.active").removeClass("active")
     var e, n, a = "",
       l = o(t).attr("class")
-    // 切换到todo 页面
+    // 切换到对应环境页面
     if (o(t)[0].className == "common") {
       o(t).addClass("active"), o(".work-link").find(".tab span:first").hasClass("active")
       o(".work-link").css("opacity", "1").find(".info").hide().html(o("#commonHtml").html()).fadeIn(200)
+    } else if (o(t)[0].className == "dev") {
+      o(t).addClass("active"), o(".work-link").find(".tab span:first").hasClass("active")
+      o(".work-link").css("opacity", "1").find(".info").hide().html(o("#devHtml").html()).fadeIn(200)
     } else if (o(t)[0].className == "test") {
       o(t).addClass("active"), o(".work-link").find(".tab span:first").hasClass("active")
       o(".work-link").css("opacity", "1").find(".info").hide().html(o("#testHtml").html()).fadeIn(200)
+    } else if (o(t)[0].className == "sat") {
+      o(t).addClass("active"), o(".work-link").find(".tab span:first").hasClass("active")
+      o(".work-link").css("opacity", "1").find(".info").hide().html(o("#satHtml").html()).fadeIn(200)
+    } else if (o(t)[0].className == "pre") {
+      o(t).addClass("active"), o(".work-link").find(".tab span:first").hasClass("active")
+      o(".work-link").css("opacity", "1").find(".info").hide().html(o("#preHtml").html()).fadeIn(200)
+    } else if (o(t)[0].className == "prod") {
+      o(t).addClass("active"), o(".work-link").find(".tab span:first").hasClass("active")
+      o(".work-link").css("opacity", "1").find(".info").hide().html(o("#prodHtml").html()).fadeIn(200)
     } else {
       o(".work-link").css("opacity", "1").find(".info").hide().html(a).fadeIn(200)
     }
